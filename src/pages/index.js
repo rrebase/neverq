@@ -101,8 +101,10 @@ const IndexPage = ({
           </defs>
         </svg>
 
-        <p style={{ marginTop: 10 }}>Never wait in a queue.</p>
-        <p>Get the best queue management app out there and save hunders of hours.</p>
+        <p style={{ marginTop: 10 }}>Don't spend time waiting in a queue</p>
+        <p style={{ color: 'grey', fontSize: 14, marginBottom: 40 }}>
+          Get the best queue management app out there and save hunders of hours.
+        </p>
 
         <Link to="/contact">
           <Button big>
