@@ -169,6 +169,7 @@ const SEO = props => {
       {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
       {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+      <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" />
     </Helmet>
   )
 }

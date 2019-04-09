@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-family: ${props => props.theme.fontFamily.sansSerif};
     font-size: ${props => props.theme.baseFontSize};
+    
     h1 {
       font-size: 3.052rem;
     }
@@ -187,11 +188,19 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Footer = styled.footer`
+  background-color: #212a34;
+
+  color: #6a7988;
+
   text-align: center;
   padding: 3rem 1rem;
   span {
     font-size: 0.75rem;
   }
+`
+
+const SpanWithMr = styled.span`
+  margin-right: 12px;
 `
 
 const Layout = ({ children, customSEO }) => {
@@ -203,9 +212,20 @@ const Layout = ({ children, customSEO }) => {
         {!customSEO && <SEO buildTime={buildTime} />}
         <GlobalStyle />
         {children}
-        <Footer>
-          &copy; NeverQ 2019
-        </Footer>
+        {/* <Footer>
+          <div>
+            <div style={{ marginBottom: 8 }}>
+              <span>&copy; NeverQ 2019 All rights reserved.</span>
+            </div>
+            <div>
+              <SpanWithMr>Contact</SpanWithMr>
+              <SpanWithMr>About us</SpanWithMr>
+              <SpanWithMr>FAQ's</SpanWithMr>
+              <SpanWithMr>Support</SpanWithMr>
+            </div>
+          </div>
+        </Footer */}
+        >
       </>
     </ThemeProvider>
   )

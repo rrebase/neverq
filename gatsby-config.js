@@ -12,6 +12,12 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: [`${__dirname}/src/scss`],
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'post',
@@ -44,7 +50,6 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          // TODO: Replace with "mdx-component-autolink-headers"
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {

@@ -9,6 +9,7 @@ import { Layout, Wrapper, Header, Button } from '../components'
 import config from '../../config'
 
 const Content = styled.div`
+  margin-bottom: 2rem;
   grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
@@ -50,27 +51,26 @@ const Contact = () => (
         <Link to="/">{config.siteTitle}</Link>
       </Header>
       <Content>
-        <h1>Contact</h1>
-        <p>Let's talk!</p>
+        <h4 style={{ marginBottom: 30 }}>Võta ühendust</h4>
         <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
           <p>
             <label htmlFor="contact-name">
-              Name
+              Nimi
               <input name="name" id="contact-name" type="text" required />
             </label>
           </p>
           <p>
             <label htmlFor="contact-email">
-              E-Mail <input name="email" id="contact-email" type="email" required />
+              Meiliaadress <input name="email" id="contact-email" type="email" required />
             </label>
           </p>
           <p>
             <label htmlFor="contact-message">
-              Your Message <textarea name="message" id="contact-message" required />
+              Sõnum <textarea name="message" id="contact-message" required />
             </label>
           </p>
           <p>
-            <Button>Send</Button>
+            <Button>Saada</Button>
           </p>
           <input type="hidden" name="form-name" value="contact-form" />
         </form>
