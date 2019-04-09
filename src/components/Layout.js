@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 
+import { graphql, useStaticQuery } from 'gatsby'
 import SEO from './SEO'
 import theme from '../../config/theme'
 import useBuildTime from '../hooks/useBuildTime'
@@ -203,16 +204,66 @@ const SpanWithMr = styled.span`
   margin-right: 12px;
 `
 
-const Layout = ({ children, customSEO }) => {
-  const buildTime = useBuildTime()
+class Layout extends React.Component {
+  componentDidMount() {
+    import('scrollreveal').then(({ default: ScrollReveal }) => {
+      const sr = ScrollReveal()
+      sr.reveal('.hero-title, .hero-paragraph, .hero-cta', {
+        duration: 1000,
+        distance: '40px',
+        easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+        origin: 'left',
+        interval: 150,
+      })
 
-  return (
-    <ThemeProvider theme={theme}>
-      <>
-        {!customSEO && <SEO buildTime={buildTime} />}
-        <GlobalStyle />
-        {children}
-        {/* <Footer>
+      sr.reveal('.hero-illustration', {
+        duration: 1000,
+        distance: '40px',
+        easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+        origin: 'right',
+        interval: 150,
+      })
+
+      sr.reveal('.feature', {
+        duration: 1000,
+        distance: '40px',
+        easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+        interval: 100,
+        origin: 'bottom',
+        scale: 0.9,
+        viewFactor: 0.5,
+      })
+
+      const pricingTables = document.querySelectorAll('.pricing-table')
+
+      pricingTables.forEach(pricingTable => {
+        const pricingTableHeader = [].slice.call(pricingTable.querySelectorAll('.pricing-table-header'))
+        const pricingTableList = [].slice.call(pricingTable.querySelectorAll('.pricing-table-features li'))
+        const pricingTableCta = [].slice.call(pricingTable.querySelectorAll('.pricing-table-cta'))
+        const elements = pricingTableHeader.concat(pricingTableList).concat(pricingTableCta)
+
+        sr.reveal(elements, {
+          duration: 600,
+          distance: '20px',
+          easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+          interval: 100,
+          origin: 'bottom',
+          viewFactor: 0.5,
+        })
+      })
+    })
+  }
+
+  render() {
+    const { customSEO, children } = this.props
+
+    return (
+      <ThemeProvider theme={theme}>
+        <>
+          {!customSEO && <SEO />}
+          <GlobalStyle />
+          {children}
+          {/* <Footer>
           <div>
             <div style={{ marginBottom: 8 }}>
               <span>&copy; NeverQ 2019 All rights reserved.</span>
@@ -225,10 +276,11 @@ const Layout = ({ children, customSEO }) => {
             </div>
           </div>
         </Footer */}
-        >
-      </>
-    </ThemeProvider>
-  )
+          >
+        </>
+      </ThemeProvider>
+    )
+  }
 }
 
 export default Layout

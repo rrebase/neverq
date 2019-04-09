@@ -1,5 +1,8 @@
 const _ = require('lodash')
 
+const isServer = typeof window === 'undefined'
+const foo = isServer ? null : require('./src/templates/animations.js')
+
 // graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
 const wrapper = promise =>
   promise.then(result => {
