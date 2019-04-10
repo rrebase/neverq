@@ -275,8 +275,7 @@ class Layout extends React.Component {
               <SpanWithMr>Support</SpanWithMr>
             </div>
           </div>
-        </Footer */}
-          >
+        </Footer> */}
         </>
       </ThemeProvider>
     )

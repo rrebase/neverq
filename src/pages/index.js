@@ -316,7 +316,7 @@ const IndexPage = ({
                         <FontAwesomeIcon icon="smile-beam" />
                       </div>
                       <h5 className="feature-title h3-mobile">Lihtne</h5>
-                      <p className="text-sm">Süsteemi kasutamine on imelihtne nii mobiilis kui ka veebis.</p>
+                      <p className="text-sm">Süsteemi kasutamine on imelihtne nii mobiilis kui ka veebis</p>
                     </div>
                   </div>
                   <div className="feature is-revealing">
@@ -325,7 +325,7 @@ const IndexPage = ({
                         <FontAwesomeIcon icon="stopwatch" />
                       </div>
                       <h5 className="feature-title h3-mobile">Reaalajas</h5>
-                      <p className="text-sm">Muudatused süsteemis toimuvad koheselt ja sisu on alati värske.</p>
+                      <p className="text-sm">Muudatused süsteemis toimuvad koheselt ja sisu on alati värske</p>
                     </div>
                   </div>
                   <div className="feature is-revealing">
@@ -334,7 +334,7 @@ const IndexPage = ({
                         <FontAwesomeIcon icon="cloud-download-alt" />
                       </div>
                       <h5 className="feature-title h4-mobile">Uuendused</h5>
-                      <p className="text-sm">Automaatsed eluaegsed uuendused kõikidele platvormidele.</p>
+                      <p className="text-sm">Automaatsed eluaegsed uuendused kõikidele platvormidele</p>
                     </div>
                   </div>
                   <div className="feature is-revealing">
@@ -343,7 +343,7 @@ const IndexPage = ({
                         <FontAwesomeIcon icon="bell" />
                       </div>
                       <h5 className="feature-title h3-mobile">Teavitused</h5>
-                      <p className="text-sm">Kohesed teavitused kõikidest sündmustest.</p>
+                      <p className="text-sm">Kohesed teavitused kõikidest sündmustest</p>
                     </div>
                   </div>
                 </div>
