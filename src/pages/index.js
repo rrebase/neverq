@@ -374,7 +374,7 @@ const IndexPage = ({
                         <div className="pricing-table-header is-revealing">
                           <div className="pricing-table-title mt-12 mb-8">Hõbe</div>
                           <div className="pricing-table-price mb-32 pb-24">
-                            <span className="pricing-table-price-amount h2">13</span>
+                            <span className="pricing-table-price-amount h2">23</span>
                             <span className="pricing-table-price-currency h4">€</span>/kuu
                           </div>
                         </div>
@@ -442,7 +442,7 @@ const IndexPage = ({
                         <div className="pricing-table-header is-revealing">
                           <div className="pricing-table-title mt-12 mb-8">Kuld</div>
                           <div className="pricing-table-price mb-32 pb-24">
-                            <span className="pricing-table-price-amount h2">53</span>
+                            <span className="pricing-table-price-amount h2">73</span>
                             <span className="pricing-table-price-currency h4">€</span>/kuu
                           </div>
                         </div>
